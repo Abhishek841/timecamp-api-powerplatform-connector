@@ -1,0 +1,187 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "TimeCamp API",
+    "description": "TimeCamp API",
+    "version": "0.1",
+    "contact": {
+      "name": "TimeCamp's API",
+      "url": "https://www.timecamp.com/kb/timecamps-api/",
+      "email": "support@timecamp.com"
+    }
+  },
+  "host": "app.timecamp.com",
+  "basePath": "/third_party/api",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "security": [
+    {
+      "ApiTokenAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Tasks"
+    }
+  ],
+  "paths": {
+    "/tasks/format/json": {
+      "get": {
+        "summary": "Get All Tasks",
+        "description": "Return all tasks.",
+        "operationId": "GetTasksAll",
+        "x-ms-visibility": "important",
+        "tags": [
+          "Tasks"
+        ],
+        "responses": {
+          "200": {
+            "description": "All tasks.",
+            "schema": {              
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/Task"
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/responses/Error"
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "Error": {
+      "description": "Unexpected error",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    }
+  },
+  "definitions": {
+    "Error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
+    },
+    "Task": {
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "task_id"
+        },
+        "parent_id": {
+          "type": "string",
+          "description": "parent_id"
+        },
+        "assigned_by": {
+          "type": "string",
+          "description": "assigned_by"
+        },
+        "name": {
+          "type": "string",
+          "description": "Task name.",
+          "x-ms-visibility": "important"
+        },
+        "external_task_id": {
+          "type": "string",
+          "description": "external_task_id"
+        },
+        "external_parent_id": {
+          "type": "string",
+          "description": "external_parent_id"
+        },
+        "level": {
+          "type": "string",
+          "description": "level"
+        },
+        "archived": {
+          "type": "string",
+          "description": "archived"
+        },
+        "tags": {
+          "type": "string",
+          "description": "tags"
+        },
+        "budgeted": {
+          "type": "string",
+          "description": "budgeted"
+        },
+        "budget_unit": {
+          "type": "string",
+          "description": "budget_unit"
+        },
+        "root_group_id": {
+          "type": "string",
+          "description": "root_group_id"
+        },
+        "billable": {
+          "type": "string",
+          "description": "billable"
+        },
+        "note": {
+          "type": "string",
+          "description": "note"
+        },
+        "public_hash": {
+          "type": "string",
+          "description": "public_hash"
+        },
+        "add_date": {
+          "type": "string",
+          "description": "add_date"
+        },
+        "modify_time": {
+          "type": "string",
+          "description": "modify_time"
+        },
+        "color": {
+          "type": "string",
+          "description": "color"
+        },
+        "user_access_type": {
+          "type": "integer",
+          "format": "int32",
+          "description": "user_access_type"
+        }
+      }
+    },
+    "TaskUser": {
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "description": "user_id"
+        },
+        "role_id": {
+          "type": "string",
+          "description": "role_id"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "ApiTokenAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  }
+}

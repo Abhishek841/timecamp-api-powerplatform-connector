@@ -1,0 +1,21 @@
+{
+    "properties": {
+      "capabilities": [],
+      "connectionParameters": {
+        "ApiTokenAuth": {
+          "type": "securestring",
+          "uiDefinition": {
+            "constraints": {
+              "clearText": false,
+              "required": "true",
+              "tabIndex": 2
+            },
+            "description": "The TimeCamp API Token for this api.",
+            "displayName": "Authorization",
+            "tooltip": "Provide your API Token from your profile settings."
+          }
+        }
+      },
+      "iconBrandColor": "#ffffff"
+    }
+  }
