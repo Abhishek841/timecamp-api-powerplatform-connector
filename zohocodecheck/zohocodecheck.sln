@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zohocodecheck", "zohocodecheck.csproj", "{ED08A7AC-3488-4D43-A33C-99B84CCF1616}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED08A7AC-3488-4D43-A33C-99B84CCF1616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED08A7AC-3488-4D43-A33C-99B84CCF1616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED08A7AC-3488-4D43-A33C-99B84CCF1616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED08A7AC-3488-4D43-A33C-99B84CCF1616}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {574F57E2-D01C-442C-89C0-3AD3DAEF25F5}
+	EndGlobalSection
+EndGlobal
